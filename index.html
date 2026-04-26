@@ -8,8 +8,6 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .page { max-width: 480px; margin: 0 auto; }
-
-/* HERO */
 .vh { background: #2D2249; padding: 40px 24px 36px; color: white; }
 .vh-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
 .vh-h1 { font-size: 32px; font-weight: 800; line-height: 1.15; margin-bottom: 14px; letter-spacing: -0.5px; }
@@ -43,8 +41,6 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-mini { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; }
 .vh-mname { font-size: 11px; color: rgba(255,255,255,0.6); }
 .vh-mamt { font-size: 11px; font-weight: 600; color: white; }
-
-/* HOW IT WORKS */
 .hiw { background: #F7F5FF; padding: 40px 24px; }
 .hiw-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; color: #7C5CFC; text-transform: uppercase; margin-bottom: 8px; }
 .hiw-h2 { font-size: 24px; font-weight: 800; color: #1A1035; line-height: 1.25; margin-bottom: 8px; }
@@ -65,8 +61,6 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .pill-green { background: #EDFAF3; border: 0.5px solid #86EBB5; border-radius: 20px; padding: 4px 10px; font-size: 11px; color: #1A7A4A; }
 .mini-pb { height: 4px; background: #E0D9FF; border-radius: 10px; margin-top: 6px; }
 .mini-pf { height: 4px; background: #7C5CFC; border-radius: 10px; width: 82%; }
-
-/* SOCIAL PROOF */
 .sp { background: #2D2249; padding: 40px 24px; color: white; text-align: center; }
 .sp-stats { display: flex; justify-content: center; gap: 24px; margin-bottom: 28px; }
 .sp-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
@@ -94,7 +88,6 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 <body>
 <div class="page">
 
-<!-- HERO -->
 <div class="vh">
   <div class="vh-badge">Beta — 136 of 200 spots taken</div>
   <h1 class="vh-h1">Your savings finally stick.</h1>
@@ -135,7 +128,6 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
 <div class="hiw">
   <div class="hiw-label">How it works</div>
   <h2 class="hiw-h2">Three steps to actually follow through.</h2>
@@ -146,74 +138,4 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
       <p class="step-title">Create a vault for your goal</p>
       <p class="step-desc">Name it, set a target, and choose how much friction to add.</p>
       <div class="step-card">
-        <div class="sc-row"><span class="sc-label">Vault name</span><span class="sc-value">Trip to Japan</span></div>
-        <div class="sc-row"><span class="sc-label">Target</span><span class="sc-value">$2,900</span></div>
-        <div class="sc-row"><span class="sc-label">Friction level</span><span class="pill-yellow">🔒 Balanced — 6hr</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="step">
-    <div class="step-left"><div class="step-num">2</div><div class="step-line"></div></div>
-    <div class="step-content">
-      <p class="step-title">Deposit and build momentum</p>
-      <p class="step-desc">Every deposit grows your savings score and keeps your streak alive.</p>
-      <div class="step-card">
-        <div class="sc-row"><span class="sc-label">Saved so far</span><span class="sc-value">$2,400 of $2,900</span></div>
-        <div class="mini-pb"><div class="mini-pf"></div></div>
-        <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Current streak</span><span class="sc-value">🔥 14 days</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="step">
-    <div class="step-left"><div class="step-num">3</div></div>
-    <div class="step-content">
-      <p class="step-title">Friction stops the impulse</p>
-      <p class="step-desc">That pause is usually enough to protect everything you've built.</p>
-      <div class="step-card">
-        <div class="sc-row"><span class="sc-label">Withdrawal requested</span><span class="pill-red">⚠ 6hrs remaining</span></div>
-        <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Most users cancel here</span><span class="pill-green">✓ Vault protected</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SOCIAL PROOF -->
-<div class="sp">
-  <div class="sp-stats">
-    <div class="sp-stat"><span class="sp-num">136</span><span class="sp-lbl">on the waitlist</span></div>
-    <div class="sp-div"></div>
-    <div class="sp-stat"><span class="sp-num">64</span><span class="sp-lbl">beta spots left</span></div>
-    <div class="sp-div"></div>
-    <div class="sp-stat"><span class="sp-num">$0</span><span class="sp-lbl">to join</span></div>
-  </div>
-  <div class="sp-bar"><div class="sp-bfill"></div></div>
-  <div class="sp-blbl"><span>Beta filling fast</span><span>200 spots total</span></div>
-  <h2 class="sp-h2">Real people. Real goals. Actually followed through.</h2>
-  <p class="sp-sub">Here's what our earliest testers said after trying the prototype.</p>
-  <div class="quotes">
-    <div class="quote">
-      <div class="q-text">"I've tried every budgeting app. This is the first one that actually stopped me touching my savings. The wait killed the impulse every time."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#4C1D95;color:#C4B5FD;">JM</div><div><div class="q-name">Jess M.</div><div class="q-tag">Beta tester · Sydney</div></div></div>
-    </div>
-    <div class="quote">
-      <div class="q-text">"Finally saved enough for a holiday without starting over. The streak kept me going way more than I expected."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#1E3A5F;color:#93C5FD;">DK</div><div><div class="q-name">Daniel K.</div><div class="q-tag">Beta tester · Melbourne</div></div></div>
-    </div>
-  </div>
-  <input class="final-input" type="email" placeholder="Enter your email address" id="final-email" />
-  <button class="final-btn" onclick="vaultlySubmit('final-email')">Claim your beta spot</button>
-  <div class="fine">Free to join · No credit card · Cancel anytime</div>
-</div>
-
-</div>
-<script>
-function vaultlySubmit(id) {
-  var email = document.getElementById(id).value;
-  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
-  // REPLACE WITH KLAVIYO: fetch your Klaviyo list endpoint here
-  alert("You're on the list! We'll be in touch soon.");
-  document.getElementById(id).value = '';
-}
-</script>
-</body>
-</html>
+        <div class="sc-row"><span class="sc-label">Vault name</span><span cla
