@@ -33,9 +33,12 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-amt { font-size: 24px; font-weight: 700; color: white; margin-bottom: 8px; }
 .vh-pbg { height: 4px; background: rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 6px; }
 .vh-pfill { height: 4px; background: #7C5CFC; border-radius: 10px; width: 82%; }
-.vh-meta { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 8px; }
-.vh-delay { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,180,0,0.12); border: 0.5px solid rgba(255,180,0,0.3); border-radius: 8px; padding: 5px 10px; font-size: 11px; color: #FFB400; margin-bottom: 10px; }
-.vh-break { width: 100%; background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 8px; color: rgba(255,255,255,0.38); font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.vh-meta { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
+.vh-deposit-row { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.5); margin-bottom: 8px; padding: 5px 0; border-top: 0.5px solid rgba(255,255,255,0.08); }
+.vh-deposit-val { color: #A78BFA; font-weight: 600; }
+.vh-strong-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,60,60,0.12); border: 0.5px solid rgba(255,60,60,0.3); border-radius: 8px; padding: 5px 10px; font-size: 11px; color: #FF6B6B; margin-bottom: 10px; }
+.vh-break { width: 100%; background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 8px; color: rgba(255,255,255,0.38); font-size: 10px; cursor: pointer; text-align: center; line-height: 1.6; }
+.vh-break-sub { font-size: 9px; color: rgba(255,180,0,0.5); text-align: center; margin-top: 3px; }
 .vh-warn { font-size: 10px; color: rgba(255,255,255,0.28); text-align: center; margin-top: 5px; }
 .vh-minis { display: flex; flex-direction: column; gap: 7px; }
 .vh-mini { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; }
@@ -94,7 +97,7 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
   <p class="vh-sub">Vaultly adds friction between you and your money — so one impulse doesn't undo weeks of progress.</p>
   <div class="vh-row">
     <input class="vh-input" type="email" placeholder="Enter your email" id="hero-email" />
-    <button class="vh-btn" onclick="vaultlySubmit('hero-email')">Get early access</button>
+    <button class="vh-btn" onclick="vaultlySubmit('hero-email', this)">Get early access</button>
   </div>
   <div class="vh-trust">
     <span class="vh-ti"><span class="vh-dot"></span>Free to join</span>
@@ -112,12 +115,20 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
         <span class="vh-appname">Vaultly</span>
       </div>
       <div class="vh-card">
-        <div class="vh-vname">Trip to Japan</div>
+        <div class="vh-vname">Trip to Japan 🇯🇵</div>
         <div class="vh-amt">$2,400</div>
         <div class="vh-pbg"><div class="vh-pfill"></div></div>
         <div class="vh-meta"><span>82% complete</span><span>Goal: $2,900</span></div>
-        <div class="vh-delay">🔒 6hr delay active — impulse blocked</div>
-        <button class="vh-break">⚠ Break vault now</button>
+        <div class="vh-deposit-row">
+          <span>📅 Weekly deposit</span>
+          <span class="vh-deposit-val">$87/week auto-calculated</span>
+        </div>
+        <div class="vh-deposit-row" style="border-top:none; padding-top:0; margin-top:-4px;">
+          <span>🎯 Goal date</span>
+          <span class="vh-deposit-val">4 Mar 2027</span>
+        </div>
+        <div class="vh-strong-badge">🔒 Strong protection active</div>
+        <button class="vh-break">⚠ Break vault now — wait 24hrs (no fee)<br>or access instantly for $15</button>
         <div class="vh-warn">This will reset your streak and savings score</div>
       </div>
       <div class="vh-minis">
@@ -136,11 +147,13 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
     <div class="step-left"><div class="step-num">1</div><div class="step-line"></div></div>
     <div class="step-content">
       <p class="step-title">Create a vault for your goal</p>
-      <p class="step-desc">Name it, set a target, and choose how much friction to add.</p>
+      <p class="step-desc">Name it, set a target amount, goal date, and deposit frequency — Vaultly calculates exactly what you need to save.</p>
       <div class="step-card">
         <div class="sc-row"><span class="sc-label">Vault name</span><span class="sc-value">Trip to Japan</span></div>
         <div class="sc-row"><span class="sc-label">Target</span><span class="sc-value">$2,900</span></div>
-        <div class="sc-row"><span class="sc-label">Friction level</span><span class="pill-yellow">🔒 Balanced — 6hr</span></div>
+        <div class="sc-row"><span class="sc-label">Goal date</span><span class="sc-value">4 Mar 2027</span></div>
+        <div class="sc-row"><span class="sc-label">Frequency</span><span class="sc-value">Weekly</span></div>
+        <div class="sc-row"><span class="sc-label">Auto deposit</span><span class="pill-yellow">$87/week</span></div>
       </div>
     </div>
   </div>
@@ -160,9 +173,9 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
     <div class="step-left"><div class="step-num">3</div></div>
     <div class="step-content">
       <p class="step-title">Friction stops the impulse</p>
-      <p class="step-desc">That pause is usually enough to protect everything you've built.</p>
+      <p class="step-desc">Need out early? Wait it out or pay a small fee. That pause is usually enough to protect everything you've built.</p>
       <div class="step-card">
-        <div class="sc-row"><span class="sc-label">Withdrawal requested</span><span class="pill-red">⚠ 6hrs remaining</span></div>
+        <div class="sc-row"><span class="sc-label">Withdrawal requested</span><span class="pill-red">⚠ 24hrs remaining</span></div>
         <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Most users cancel here</span><span class="pill-green">✓ Vault protected</span></div>
       </div>
     </div>
@@ -196,16 +209,15 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
     </div>
   </div>
   <input class="final-input" type="email" placeholder="Enter your email address" id="final-email" />
-  <button class="final-btn" onclick="vaultlySubmit('final-email')">Claim your beta spot</button>
+  <button class="final-btn" onclick="vaultlySubmit('final-email', this)">Claim your beta spot</button>
   <div class="fine">Free to join · No credit card · Cancel anytime</div>
 </div>
 
 </div>
 <script>
-function vaultlySubmit(id) {
+function vaultlySubmit(id, btn) {
   var email = document.getElementById(id).value;
   if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
-  var btn = event.target;
   btn.textContent = 'Joining...';
   btn.disabled = true;
   fetch('https://a.klaviyo.com/client/subscriptions/?company_id=VG3Xut', {
@@ -218,7 +230,7 @@ function vaultlySubmit(id) {
     document.getElementById(id).value = '';
   }).catch(() => {
     alert('Something went wrong. Please try again.');
-    btn.textContent = 'Claim your beta spot';
+    btn.textContent = id === 'hero-email' ? 'Get early access' : 'Claim your beta spot';
     btn.disabled = false;
   });
 }
