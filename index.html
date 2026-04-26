@@ -8,7 +8,9 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .page { max-width: 480px; margin: 0 auto; }
-.vh { background: #2D2249; padding: 40px 24px 36px; color: white; }
+.vh-logo-bar { background: #2D2249; padding: 24px 24px 0; display: flex; align-items: center; }
+.vh-logo-bar img { height: 36px; width: auto; }
+.vh { background: #2D2249; padding: 24px 24px 36px; color: white; }
 .vh-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
 .vh-h1 { font-size: 32px; font-weight: 800; line-height: 1.15; margin-bottom: 14px; letter-spacing: -0.5px; }
 .vh-sub { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 28px; }
@@ -22,11 +24,11 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-spots { margin-bottom: 28px; }
 .vh-spots-lbl { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 7px; }
 .vh-bar { height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px; }
-.vh-fill { height: 5px; background: #7C5CFC; border-radius: 10px; width: 68%; }
+.vh-fill { height: 5px; background: #7C5CFC; border-radius: 10px; width: 24%; }
 .vh-phone { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 16px; }
 .vh-screen { background: #1A1035; border-radius: 12px; padding: 16px; }
 .vh-appbar { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
-.vh-logo { width: 24px; height: 24px; background: #7C5CFC; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; }
+.vh-app-logo { width: 24px; height: 24px; background: #7C5CFC; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: white; }
 .vh-appname { font-size: 13px; font-weight: 600; color: white; }
 .vh-card { background: rgba(124,92,252,0.18); border: 0.5px solid rgba(124,92,252,0.35); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
 .vh-vname { font-size: 11px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
@@ -34,11 +36,10 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-pbg { height: 4px; background: rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 6px; }
 .vh-pfill { height: 4px; background: #7C5CFC; border-radius: 10px; width: 82%; }
 .vh-meta { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
-.vh-deposit-row { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.5); margin-bottom: 8px; padding: 5px 0; border-top: 0.5px solid rgba(255,255,255,0.08); }
+.vh-deposit-row { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.5); margin-bottom: 4px; padding: 5px 0; border-top: 0.5px solid rgba(255,255,255,0.08); }
 .vh-deposit-val { color: #A78BFA; font-weight: 600; }
 .vh-strong-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,60,60,0.12); border: 0.5px solid rgba(255,60,60,0.3); border-radius: 8px; padding: 5px 10px; font-size: 11px; color: #FF6B6B; margin-bottom: 10px; }
 .vh-break { width: 100%; background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 8px; color: rgba(255,255,255,0.38); font-size: 10px; cursor: pointer; text-align: center; line-height: 1.6; }
-.vh-break-sub { font-size: 9px; color: rgba(255,180,0,0.5); text-align: center; margin-top: 3px; }
 .vh-warn { font-size: 10px; color: rgba(255,255,255,0.28); text-align: center; margin-top: 5px; }
 .vh-minis { display: flex; flex-direction: column; gap: 7px; }
 .vh-mini { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; }
@@ -71,7 +72,7 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .sp-lbl { font-size: 12px; color: rgba(255,255,255,0.5); }
 .sp-div { width: 1px; background: rgba(255,255,255,0.1); }
 .sp-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 6px; }
-.sp-bfill { height: 4px; background: #7C5CFC; border-radius: 10px; width: 68%; }
+.sp-bfill { height: 4px; background: #7C5CFC; border-radius: 10px; width: 24%; }
 .sp-blbl { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 28px; }
 .sp-h2 { font-size: 22px; font-weight: 800; line-height: 1.3; margin-bottom: 10px; }
 .sp-sub { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 24px; line-height: 1.6; }
@@ -91,8 +92,12 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 <body>
 <div class="page">
 
+<div class="vh-logo-bar">
+  <img src="logo_soft_orange.png" alt="Vaultly" />
+</div>
+
 <div class="vh">
-  <div class="vh-badge">Beta — 136 of 200 spots taken</div>
+  <div class="vh-badge">Beta — 47 of 200 spots taken</div>
   <h1 class="vh-h1">Your savings finally stick.</h1>
   <p class="vh-sub">Vaultly adds friction between you and your money — so one impulse doesn't undo weeks of progress.</p>
   <div class="vh-row">
@@ -105,13 +110,13 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
     <span class="vh-ti"><span class="vh-dot"></span>Australian-built</span>
   </div>
   <div class="vh-spots">
-    <div class="vh-spots-lbl"><span>Beta spots remaining</span><span>64 left</span></div>
+    <div class="vh-spots-lbl"><span>Beta spots remaining</span><span>153 left</span></div>
     <div class="vh-bar"><div class="vh-fill"></div></div>
   </div>
   <div class="vh-phone">
     <div class="vh-screen">
       <div class="vh-appbar">
-        <div class="vh-logo">V</div>
+        <div class="vh-app-logo">V</div>
         <span class="vh-appname">Vaultly</span>
       </div>
       <div class="vh-card">
@@ -184,16 +189,16 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 
 <div class="sp">
   <div class="sp-stats">
-    <div class="sp-stat"><span class="sp-num">136</span><span class="sp-lbl">on the waitlist</span></div>
+    <div class="sp-stat"><span class="sp-num">47</span><span class="sp-lbl">on the waitlist</span></div>
     <div class="sp-div"></div>
-    <div class="sp-stat"><span class="sp-num">64</span><span class="sp-lbl">beta spots left</span></div>
+    <div class="sp-stat"><span class="sp-num">153</span><span class="sp-lbl">beta spots left</span></div>
     <div class="sp-div"></div>
     <div class="sp-stat"><span class="sp-num">$0</span><span class="sp-lbl">to join</span></div>
   </div>
   <div class="sp-bar"><div class="sp-bfill"></div></div>
   <div class="sp-blbl"><span>Beta filling fast</span><span>200 spots total</span></div>
-  <h2 class="sp-h2">Real people. Real goals. Actually followed through.</h2>
-  <p class="sp-sub">Here's what people are already saying.</p>
+  <h2 class="sp-h2">You're not alone. Australians are ready for this.</h2>
+  <p class="sp-sub">We shared our idea — here's what people told us.</p>
   <div class="quotes">
     <div class="quote">
       <div class="q-text">"This is just what I have been looking for. I have been searching for an app to help me stop my impulse spending."</div>
