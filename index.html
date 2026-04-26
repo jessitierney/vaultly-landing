@@ -25,7 +25,7 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-spots-lbl { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 7px; }
 .vh-bar { height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px; }
 .vh-fill { height: 5px; background: #7C5CFC; border-radius: 10px; width: 24%; }
-.vh-phone { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 16px; }
+.vh-phone { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 16px; margin-bottom: 16px; }
 .vh-screen { background: #1A1035; border-radius: 12px; padding: 16px; }
 .vh-appbar { display: flex; align-items: center; margin-bottom: 16px; }
 .vh-appbar img { width: 50%; height: auto; margin-left: 0; }
@@ -44,6 +44,11 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-mini { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; }
 .vh-mname { font-size: 11px; color: rgba(255,255,255,0.6); }
 .vh-mamt { font-size: 11px; font-weight: 600; color: white; }
+.mvp-cta { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 20px; margin-bottom: 28px; text-align: center; }
+.mvp-cta-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 8px; }
+.mvp-cta-text { font-size: 16px; font-weight: 700; color: white; margin-bottom: 14px; }
+.mvp-cta-btn { display: block; width: 100%; background: linear-gradient(135deg, #7C5CFC, #9B6DFF); border: none; border-radius: 10px; padding: 14px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; }
+.mvp-cta-sub { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 10px; }
 .hiw { background: #F7F5FF; padding: 40px 24px; }
 .hiw-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; color: #7C5CFC; text-transform: uppercase; margin-bottom: 8px; }
 .hiw-h2 { font-size: 24px; font-weight: 800; color: #1A1035; line-height: 1.25; margin-bottom: 8px; }
@@ -140,6 +145,13 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
       </div>
     </div>
   </div>
+
+  <div class="mvp-cta">
+    <div class="mvp-cta-label">🚀 Live prototype</div>
+    <div class="mvp-cta-text">Want to try it yourself? Our MVP is live now.</div>
+    <a href="https://myvaultly.base44.app" target="_blank" class="mvp-cta-btn">Try the Vaultly prototype →</a>
+    <div class="mvp-cta-sub">Free to try · No payment required</div>
+  </div>
 </div>
 
 <div class="hiw">
@@ -187,56 +199,4 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 
 <div class="sp">
   <div class="sp-stats">
-    <div class="sp-stat"><span class="sp-num">47</span><span class="sp-lbl">on the waitlist</span></div>
-    <div class="sp-div"></div>
-    <div class="sp-stat"><span class="sp-num">153</span><span class="sp-lbl">beta spots left</span></div>
-    <div class="sp-div"></div>
-    <div class="sp-stat"><span class="sp-num">$0</span><span class="sp-lbl">to join</span></div>
-  </div>
-  <div class="sp-bar"><div class="sp-bfill"></div></div>
-  <div class="sp-blbl"><span>Beta filling fast</span><span>200 spots total</span></div>
-  <h2 class="sp-h2">You're not alone. Australians are ready for this.</h2>
-  <p class="sp-sub">We shared our idea — here's what people told us.</p>
-  <div class="quotes">
-    <div class="quote">
-      <div class="q-text">"This is just what I have been looking for. I have been searching for an app to help me stop my impulse spending."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#4C1D95;color:#C4B5FD;">S</div><div><div class="q-name">Shaun</div><div class="q-tag">QLD</div></div></div>
-    </div>
-    <div class="quote">
-      <div class="q-text">"I cannot wait for the full release of this app. BNPL has got me good."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#1E3A5F;color:#93C5FD;">R</div><div><div class="q-name">Renee</div><div class="q-tag">QLD</div></div></div>
-    </div>
-    <div class="quote">
-      <div class="q-text">"My ADHD has got me spending like I'm the queen. This is exactly what I need to help with all my impulse purchases."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#3B1F5E;color:#E9D5FF;">J</div><div><div class="q-name">Jade</div><div class="q-tag">QLD</div></div></div>
-    </div>
-  </div>
-  <input class="final-input" type="email" placeholder="Enter your email address" id="final-email" />
-  <button class="final-btn" onclick="vaultlySubmit('final-email', this)">Claim your beta spot</button>
-  <div class="fine">Free to join · No credit card · Australian-built</div>
-</div>
-
-</div>
-<script>
-function vaultlySubmit(id, btn) {
-  var email = document.getElementById(id).value;
-  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
-  btn.textContent = 'Joining...';
-  btn.disabled = true;
-  fetch('https://a.klaviyo.com/client/subscriptions/?company_id=VG3Xut', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', 'revision': '2023-02-22' },
-    body: JSON.stringify({ data: { type: 'subscription', attributes: { list_id: 'UJxyyy', email: email } } })
-  }).then(() => {
-    btn.textContent = '✓ You\'re on the list!';
-    btn.style.background = '#1A7A4A';
-    document.getElementById(id).value = '';
-  }).catch(() => {
-    alert('Something went wrong. Please try again.');
-    btn.textContent = id === 'hero-email' ? 'Get early access' : 'Claim your beta spot';
-    btn.disabled = false;
-  });
-}
-</script>
-</body>
-</html>
+    <div class="sp-stat"><span class="sp-num">47</span><span class="sp
