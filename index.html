@@ -149,4 +149,94 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
   <div class="step">
     <div class="step-left"><div class="step-num">1</div><div class="step-line"></div></div>
     <div class="step-content">
-      <p class="step-title">Create a vaul
+      <p class="step-title">Create a vault for your goal</p>
+      <p class="step-desc">Name it, set a target amount, goal date, and deposit frequency — Vaultly calculates exactly what you need to save.</p>
+      <div class="step-card">
+        <div class="sc-row"><span class="sc-label">Vault name</span><span class="sc-value">Trip to Japan</span></div>
+        <div class="sc-row"><span class="sc-label">Target</span><span class="sc-value">$2,900</span></div>
+        <div class="sc-row"><span class="sc-label">Goal date</span><span class="sc-value">4 Mar 2027</span></div>
+        <div class="sc-row"><span class="sc-label">Frequency</span><span class="sc-value">Weekly</span></div>
+        <div class="sc-row"><span class="sc-label">Auto deposit</span><span class="pill-yellow">$87/week</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-left"><div class="step-num">2</div><div class="step-line"></div></div>
+    <div class="step-content">
+      <p class="step-title">Deposit and build momentum</p>
+      <p class="step-desc">Every deposit grows your savings score and keeps your streak alive.</p>
+      <div class="step-card">
+        <div class="sc-row"><span class="sc-label">Saved so far</span><span class="sc-value">$2,400 of $2,900</span></div>
+        <div class="mini-pb"><div class="mini-pf"></div></div>
+        <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Current streak</span><span class="sc-value">🔥 14 days</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-left"><div class="step-num">3</div></div>
+    <div class="step-content">
+      <p class="step-title">Friction stops the impulse</p>
+      <p class="step-desc">Need out early? Wait it out or pay a small fee. That pause is usually enough to protect everything you've built.</p>
+      <div class="step-card">
+        <div class="sc-row"><span class="sc-label">Withdrawal requested</span><span class="pill-red">⚠ 24hrs remaining</span></div>
+        <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Most users cancel here</span><span class="pill-green">✓ Vault protected</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sp">
+  <div class="sp-stats">
+    <div class="sp-stat"><span class="sp-num">47</span><span class="sp-lbl">on the waitlist</span></div>
+    <div class="sp-div"></div>
+    <div class="sp-stat"><span class="sp-num">153</span><span class="sp-lbl">beta spots left</span></div>
+    <div class="sp-div"></div>
+    <div class="sp-stat"><span class="sp-num">$0</span><span class="sp-lbl">to join</span></div>
+  </div>
+  <div class="sp-bar"><div class="sp-bfill"></div></div>
+  <div class="sp-blbl"><span>Beta filling fast</span><span>200 spots total</span></div>
+  <h2 class="sp-h2">You're not alone. Australians are ready for this.</h2>
+  <p class="sp-sub">We shared our idea — here's what people told us.</p>
+  <div class="quotes">
+    <div class="quote">
+      <div class="q-text">"This is just what I have been looking for. I have been searching for an app to help me stop my impulse spending."</div>
+      <div class="q-author"><div class="q-avatar" style="background:#4C1D95;color:#C4B5FD;">S</div><div><div class="q-name">Shaun</div><div class="q-tag">QLD</div></div></div>
+    </div>
+    <div class="quote">
+      <div class="q-text">"I cannot wait for the full release of this app. BNPL has got me good."</div>
+      <div class="q-author"><div class="q-avatar" style="background:#1E3A5F;color:#93C5FD;">R</div><div><div class="q-name">Renee</div><div class="q-tag">QLD</div></div></div>
+    </div>
+    <div class="quote">
+      <div class="q-text">"My ADHD has got me spending like I'm the queen. This is exactly what I need to help with all my impulse purchases."</div>
+      <div class="q-author"><div class="q-avatar" style="background:#3B1F5E;color:#E9D5FF;">J</div><div><div class="q-name">Jade</div><div class="q-tag">QLD</div></div></div>
+    </div>
+  </div>
+  <input class="final-input" type="email" placeholder="Enter your email address" id="final-email" />
+  <button class="final-btn" onclick="vaultlySubmit('final-email', this)">Claim your beta spot</button>
+  <div class="fine">Free to join · No credit card · Cancel anytime</div>
+</div>
+
+</div>
+<script>
+function vaultlySubmit(id, btn) {
+  var email = document.getElementById(id).value;
+  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+  fetch('https://a.klaviyo.com/client/subscriptions/?company_id=VG3Xut', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'revision': '2023-02-22' },
+    body: JSON.stringify({ data: { type: 'subscription', attributes: { list_id: 'UJxyyy', email: email } } })
+  }).then(() => {
+    btn.textContent = '✓ You\'re on the list!';
+    btn.style.background = '#1A7A4A';
+    document.getElementById(id).value = '';
+  }).catch(() => {
+    alert('Something went wrong. Please try again.');
+    btn.textContent = id === 'hero-email' ? 'Get early access' : 'Claim your beta spot';
+    btn.disabled = false;
+  });
+}
+</script>
+</body>
+</html>
