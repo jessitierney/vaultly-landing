@@ -16,20 +16,9 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
 .vh-h1 { font-size: 32px; font-weight: 800; line-height: 1.15; margin-bottom: 14px; letter-spacing: -0.5px; }
 .vh-sub { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 28px; }
-.vh-proto-btn { display: block; width: 100%; background: linear-gradient(135deg, #7C5CFC, #9B6DFF); border: none; border-radius: 10px; padding: 15px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; margin-bottom: 12px; }
-.vh-proto-sub { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 20px; }
-.vh-row { display: flex; gap: 8px; margin-bottom: 14px; }
-.vh-input { flex: 1; background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 13px 14px; color: white; font-size: 14px; outline: none; min-width: 0; }
-.vh-input::placeholder { color: rgba(255,255,255,0.4); }
-.vh-btn { background: rgba(255,255,255,0.12); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 13px 18px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-.vh-trust { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
-.vh-ti { font-size: 12px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 5px; }
-.vh-dot { width: 5px; height: 5px; border-radius: 50%; background: #7C5CFC; flex-shrink: 0; }
-.vh-spots { margin-bottom: 28px; }
-.vh-spots-lbl { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 7px; }
-.vh-bar { height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px; }
-.vh-fill { height: 5px; background: #7C5CFC; border-radius: 10px; width: 24%; }
-.vh-phone { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 16px; margin-bottom: 12px; }
+.vh-proto-btn { display: block; width: 100%; background: linear-gradient(135deg, #7C5CFC, #9B6DFF); border: none; border-radius: 10px; padding: 15px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; margin-bottom: 10px; }
+.vh-proto-sub { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 28px; }
+.vh-phone { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 16px; margin-bottom: 24px; }
 .vh-screen { background: #1A1035; border-radius: 12px; padding: 16px; }
 .vh-appbar { display: flex; align-items: center; margin-bottom: 16px; }
 .vh-appbar img { width: 50%; height: auto; margin-left: 0; }
@@ -48,6 +37,18 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-mini { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; }
 .vh-mname { font-size: 11px; color: rgba(255,255,255,0.6); }
 .vh-mamt { font-size: 11px; font-weight: 600; color: white; }
+.vh-signup { padding: 0 0 32px; }
+.vh-row { display: flex; gap: 8px; margin-bottom: 14px; }
+.vh-input { flex: 1; background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 13px 14px; color: white; font-size: 14px; outline: none; min-width: 0; }
+.vh-input::placeholder { color: rgba(255,255,255,0.4); }
+.vh-btn { background: #7C5CFC; border: none; border-radius: 10px; padding: 13px 18px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.vh-trust { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+.vh-ti { font-size: 12px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 5px; }
+.vh-dot { width: 5px; height: 5px; border-radius: 50%; background: #7C5CFC; flex-shrink: 0; }
+.vh-spots { margin-bottom: 0; }
+.vh-spots-lbl { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 7px; }
+.vh-bar { height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px; }
+.vh-fill { height: 5px; background: #7C5CFC; border-radius: 10px; width: 24%; }
 .hiw { background: #F7F5FF; padding: 40px 24px; }
 .hiw-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; color: #7C5CFC; text-transform: uppercase; margin-bottom: 8px; }
 .hiw-h2 { font-size: 24px; font-weight: 800; color: #1A1035; line-height: 1.25; margin-bottom: 8px; }
@@ -128,19 +129,6 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
   <a href="https://myvaultly.base44.app" target="_blank" class="vh-proto-btn">Try the Vaultly prototype →</a>
   <div class="vh-proto-sub">Quick signup required · Free to use · No payment needed</div>
 
-  <div class="vh-row">
-    <input class="vh-input" type="email" placeholder="Or enter your email for early access" id="hero-email" />
-    <button class="vh-btn" onclick="vaultlySubmit('hero-email', this)">Join</button>
-  </div>
-  <div class="vh-trust">
-    <span class="vh-ti"><span class="vh-dot"></span>Free to join</span>
-    <span class="vh-ti"><span class="vh-dot"></span>No credit card</span>
-    <span class="vh-ti"><span class="vh-dot"></span>Australian-built</span>
-  </div>
-  <div class="vh-spots">
-    <div class="vh-spots-lbl"><span>Beta spots remaining</span><span>153 left</span></div>
-    <div class="vh-bar"><div class="vh-fill"></div></div>
-  </div>
   <div class="vh-phone">
     <div class="vh-screen">
       <div class="vh-appbar">
@@ -167,6 +155,22 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
         <div class="vh-mini"><span class="vh-mname">Emergency fund</span><span class="vh-mamt">$800</span></div>
         <div class="vh-mini"><span class="vh-mname">New laptop</span><span class="vh-mamt">$340</span></div>
       </div>
+    </div>
+  </div>
+
+  <div class="vh-signup">
+    <div class="vh-row">
+      <input class="vh-input" type="email" placeholder="Enter your email for early access" id="hero-email" />
+      <button class="vh-btn" onclick="vaultlySubmit('hero-email', this)">Join</button>
+    </div>
+    <div class="vh-trust">
+      <span class="vh-ti"><span class="vh-dot"></span>Free to join</span>
+      <span class="vh-ti"><span class="vh-dot"></span>No credit card</span>
+      <span class="vh-ti"><span class="vh-dot"></span>Australian-built</span>
+    </div>
+    <div class="vh-spots">
+      <div class="vh-spots-lbl"><span>Beta spots remaining</span><span>153 left</span></div>
+      <div class="vh-bar"><div class="vh-fill"></div></div>
     </div>
   </div>
 </div>
