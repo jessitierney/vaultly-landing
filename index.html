@@ -16,10 +16,12 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
 .vh-h1 { font-size: 32px; font-weight: 800; line-height: 1.15; margin-bottom: 14px; letter-spacing: -0.5px; }
 .vh-sub { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 28px; }
+.vh-proto-btn { display: block; width: 100%; background: linear-gradient(135deg, #7C5CFC, #9B6DFF); border: none; border-radius: 10px; padding: 15px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; margin-bottom: 12px; }
+.vh-proto-sub { font-size: 11px; color: rgba(255,255,255,0.35); text-align: center; margin-bottom: 20px; }
 .vh-row { display: flex; gap: 8px; margin-bottom: 14px; }
 .vh-input { flex: 1; background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 13px 14px; color: white; font-size: 14px; outline: none; min-width: 0; }
 .vh-input::placeholder { color: rgba(255,255,255,0.4); }
-.vh-btn { background: #7C5CFC; border: none; border-radius: 10px; padding: 13px 18px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.vh-btn { background: rgba(255,255,255,0.12); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 13px 18px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
 .vh-trust { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
 .vh-ti { font-size: 12px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 5px; }
 .vh-dot { width: 5px; height: 5px; border-radius: 50%; background: #7C5CFC; flex-shrink: 0; }
@@ -46,12 +48,6 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .vh-mini { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; }
 .vh-mname { font-size: 11px; color: rgba(255,255,255,0.6); }
 .vh-mamt { font-size: 11px; font-weight: 600; color: white; }
-.mvp-wrap { background: #2D2249; padding: 0 24px 28px; }
-.mvp-cta { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 20px; text-align: center; }
-.mvp-cta-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 8px; }
-.mvp-cta-text { font-size: 16px; font-weight: 700; color: white; margin-bottom: 14px; }
-.mvp-cta-btn { display: block; width: 100%; background: linear-gradient(135deg, #7C5CFC, #9B6DFF); border: none; border-radius: 10px; padding: 14px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; }
-.mvp-cta-sub { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 10px; }
 .hiw { background: #F7F5FF; padding: 40px 24px; }
 .hiw-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; color: #7C5CFC; text-transform: uppercase; margin-bottom: 8px; }
 .hiw-h2 { font-size: 24px; font-weight: 800; color: #1A1035; line-height: 1.25; margin-bottom: 8px; }
@@ -72,6 +68,27 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
 .pill-green { background: #EDFAF3; border: 0.5px solid #86EBB5; border-radius: 20px; padding: 4px 10px; font-size: 11px; color: #1A7A4A; }
 .mini-pb { height: 4px; background: #E0D9FF; border-radius: 10px; margin-top: 6px; }
 .mini-pf { height: 4px; background: #7C5CFC; border-radius: 10px; width: 82%; }
+.score-section { background: #F7F5FF; padding: 40px 24px; }
+.score-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; color: #7C5CFC; text-transform: uppercase; margin-bottom: 8px; }
+.score-h2 { font-size: 24px; font-weight: 800; color: #1A1035; line-height: 1.25; margin-bottom: 8px; }
+.score-sub { font-size: 14px; color: #6B6480; margin-bottom: 28px; line-height: 1.6; }
+.score-card { background: white; border: 0.5px solid #E0D9FF; border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+.score-top { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; }
+.score-gauge { position: relative; width: 110px; height: 110px; flex-shrink: 0; }
+.score-info { flex: 1; }
+.score-rating { font-size: 18px; font-weight: 800; color: #7C5CFC; margin-bottom: 4px; }
+.score-desc { font-size: 13px; color: #6B6480; line-height: 1.5; }
+.score-labels { display: flex; justify-content: space-between; font-size: 11px; color: #9B91B8; margin-bottom: 6px; }
+.score-bar-bg { height: 6px; background: #E0D9FF; border-radius: 10px; margin-bottom: 20px; position: relative; }
+.score-bar-fill { height: 6px; background: linear-gradient(90deg, #C4B5FD, #7C5CFC, #FF8C42); border-radius: 10px; width: 78%; }
+.score-bar-dot { position: absolute; top: -4px; left: 78%; width: 14px; height: 14px; background: #FF8C42; border-radius: 50%; border: 2px solid white; transform: translateX(-50%); }
+.score-rows { display: flex; flex-direction: column; gap: 10px; }
+.score-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: #F7F5FF; border-radius: 10px; }
+.score-row-title { font-size: 13px; font-weight: 600; color: #1A1035; }
+.score-row-sub { font-size: 11px; color: #9B91B8; }
+.score-row-pts { font-size: 14px; font-weight: 800; color: #7C5CFC; }
+.score-tip { background: #EDE9FF; border-radius: 12px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.score-tip-text { font-size: 13px; color: #4C1D95; line-height: 1.5; }
 .sp { background: #2D2249; padding: 40px 24px; color: white; text-align: center; }
 .sp-stats { display: flex; justify-content: center; gap: 24px; margin-bottom: 28px; }
 .sp-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
@@ -107,9 +124,13 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
   <div class="vh-badge">Beta — 47 of 200 spots taken</div>
   <h1 class="vh-h1">Your savings finally stick.</h1>
   <p class="vh-sub">Vaultly adds friction between you and your money — so one impulse doesn't undo weeks of progress.</p>
+
+  <a href="https://myvaultly.base44.app" target="_blank" class="vh-proto-btn">Try the Vaultly prototype →</a>
+  <div class="vh-proto-sub">Quick signup required · Free to use · No payment needed</div>
+
   <div class="vh-row">
-    <input class="vh-input" type="email" placeholder="Enter your email" id="hero-email" />
-    <button class="vh-btn" onclick="vaultlySubmit('hero-email', this)">Get early access</button>
+    <input class="vh-input" type="email" placeholder="Or enter your email for early access" id="hero-email" />
+    <button class="vh-btn" onclick="vaultlySubmit('hero-email', this)">Join</button>
   </div>
   <div class="vh-trust">
     <span class="vh-ti"><span class="vh-dot"></span>Free to join</span>
@@ -147,15 +168,6 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
         <div class="vh-mini"><span class="vh-mname">New laptop</span><span class="vh-mamt">$340</span></div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="mvp-wrap">
-  <div class="mvp-cta">
-    <div class="mvp-cta-label">🚀 Live now</div>
-    <div class="mvp-cta-text">Try our working prototype — it's live right now.</div>
-    <a href="https://myvaultly.base44.app" target="_blank" class="mvp-cta-btn">Try the Vaultly prototype →</a>
-    <div class="mvp-cta-sub">Quick signup required · Free to use · No payment needed</div>
   </div>
 </div>
 
@@ -199,6 +211,58 @@ body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Seg
         <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Most users cancel here</span><span class="pill-green">✓ Vault protected</span></div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="score-section">
+  <div class="score-label">Savings Score</div>
+  <h2 class="score-h2">Your money habits, scored.</h2>
+  <p class="score-sub">Like a credit score — but for how well you protect your savings. Build it by depositing consistently, keeping your streak alive, and never breaking a vault.</p>
+  <div class="score-card">
+    <div class="score-top">
+      <div class="score-gauge">
+        <svg width="110" height="110" viewBox="0 0 110 110">
+          <circle cx="55" cy="55" r="46" fill="none" stroke="#E0D9FF" stroke-width="10"/>
+          <circle cx="55" cy="55" r="46" fill="none" stroke="#7C5CFC" stroke-width="10"
+            stroke-dasharray="289" stroke-dashoffset="75"
+            stroke-linecap="round"
+            transform="rotate(-90 55 55)"/>
+        </svg>
+        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center;">
+          <div style="font-size:22px; font-weight:800; color:#1A1035; line-height:1;">782</div>
+          <div style="font-size:10px; color:#9B91B8; font-weight:500;">of 1000</div>
+        </div>
+      </div>
+      <div class="score-info">
+        <div class="score-rating">Great</div>
+        <div class="score-desc">You're in the top 24% of Vaultly savers. Keep your streak going to hit Excellent.</div>
+      </div>
+    </div>
+    <div class="score-labels">
+      <span>Poor</span><span>Fair</span><span>Good</span><span>Great</span><span>Excellent</span>
+    </div>
+    <div class="score-bar-bg">
+      <div class="score-bar-fill"></div>
+      <div class="score-bar-dot"></div>
+    </div>
+    <div class="score-rows">
+      <div class="score-row">
+        <div><div class="score-row-title">Deposit streak</div><div class="score-row-sub">14 weeks in a row</div></div>
+        <div class="score-row-pts">+210</div>
+      </div>
+      <div class="score-row">
+        <div><div class="score-row-title">Vaults protected</div><div class="score-row-sub">Never broken a vault</div></div>
+        <div class="score-row-pts">+320</div>
+      </div>
+      <div class="score-row">
+        <div><div class="score-row-title">Goals completed</div><div class="score-row-sub">2 vaults reached target</div></div>
+        <div class="score-row-pts">+252</div>
+      </div>
+    </div>
+  </div>
+  <div class="score-tip">
+    <div style="font-size:16px;">💡</div>
+    <div class="score-tip-text">Deposit this week to keep your streak and add <strong>+15 points</strong> to your score.</div>
   </div>
 </div>
 
@@ -250,7 +314,7 @@ function vaultlySubmit(id, btn) {
     document.getElementById(id).value = '';
   }).catch(() => {
     alert('Something went wrong. Please try again.');
-    btn.textContent = id === 'hero-email' ? 'Get early access' : 'Claim your beta spot';
+    btn.textContent = id === 'hero-email' ? 'Join' : 'Claim your beta spot';
     btn.disabled = false;
   });
 }
