@@ -5,263 +5,220 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vaultly - Stop Impulse Spending</title>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2D7N9W9V9N"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-2D7N9W9V9N');
+
+window.addEventListener('load', function () {
+  gtag('js', new Date());
+
+  gtag('config', 'G-2D7N9W9V9N', {
+    debug_mode: true,
+    send_page_view: true
+  });
+
+  gtag('event', 'page_view', {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: window.location.pathname
+  });
+});
 </script>
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: #2D2249; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-.page { max-width: 480px; margin: 0 auto; }
-.vh-logo-bar { background: #2D2249; padding: 16px 24px 12px; display: flex; align-items: center; }
-.vh-logo-bar img { height: 64px; width: auto; margin-left: 0; }
-.vh { background: #2D2249; padding: 0px 24px 0px; color: white; }
-.vh-badge { display: inline-block; background: rgba(255,255,255,0.12); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
-.vh-h1 { font-size: 32px; font-weight: 800; line-height: 1.15; margin-bottom: 14px; letter-spacing: -0.5px; }
-.vh-sub { font-size: 16px; color: rgba(255,255,255,0.72); line-height: 1.6; margin-bottom: 28px; }
-.vh-row { display: flex; gap: 8px; margin-bottom: 14px; }
-.vh-input { flex: 1; background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 13px 14px; color: white; font-size: 14px; outline: none; min-width: 0; }
-.vh-input::placeholder { color: rgba(255,255,255,0.4); }
-.vh-btn { background: #7C5CFC; border: none; border-radius: 10px; padding: 13px 18px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-.vh-trust { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
-.vh-ti { font-size: 12px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 5px; }
-.vh-dot { width: 5px; height: 5px; border-radius: 50%; background: #7C5CFC; flex-shrink: 0; }
-.vh-spots { margin-bottom: 28px; }
-.vh-spots-lbl { display: flex; justify-content: space-between; font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 7px; }
-.vh-bar { height: 5px; background: rgba(255,255,255,0.1); border-radius: 10px; }
-.vh-fill { height: 5px; background: #7C5CFC; border-radius: 10px; width: 24%; }
-.vh-phone { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 16px; margin-bottom: 12px; }
-.vh-screen { background: #1A1035; border-radius: 12px; padding: 16px; }
-.vh-appbar { display: flex; align-items: center; margin-bottom: 16px; }
-.vh-appbar img { width: 50%; height: auto; margin-left: 0; }
-.vh-card { background: rgba(124,92,252,0.18); border: 0.5px solid rgba(124,92,252,0.35); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; }
-.vh-vname { font-size: 11px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
-.vh-amt { font-size: 24px; font-weight: 700; color: white; margin-bottom: 8px; }
-.vh-pbg { height: 4px; background: rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 6px; }
-.vh-pfill { height: 4px; background: #7C5CFC; border-radius: 10px; width: 82%; }
-.vh-meta { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
-.vh-deposit-row { display: flex; justify-content: space-between; font-size: 10px; color: rgba(255,255,255,0.5); margin-bottom: 4px; padding: 5px 0; border-top: 0.5px solid rgba(255,255,255,0.08); }
-.vh-deposit-val { color: #A78BFA; font-weight: 600; }
-.vh-strong-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,60,60,0.12); border: 0.5px solid rgba(255,60,60,0.3); border-radius: 8px; padding: 5px 10px; font-size: 11px; color: #FF6B6B; margin-bottom: 10px; }
-.vh-break { width: 100%; background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 8px; color: rgba(255,255,255,0.38); font-size: 10px; cursor: pointer; text-align: center; line-height: 1.6; }
-.vh-warn { font-size: 10px; color: rgba(255,255,255,0.28); text-align: center; margin-top: 5px; }
-.vh-minis { display: flex; flex-direction: column; gap: 7px; }
-.vh-mini { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 8px 10px; display: flex; justify-content: space-between; align-items: center; }
-.vh-mname { font-size: 11px; color: rgba(255,255,255,0.6); }
-.vh-mamt { font-size: 11px; font-weight: 600; color: white; }
-.mvp-wrap { background: #2D2249; padding: 0 24px 28px; }
-.mvp-cta { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 20px; text-align: center; }
-.mvp-cta-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 8px; }
-.mvp-cta-text { font-size: 16px; font-weight: 700; color: white; margin-bottom: 14px; }
-.mvp-cta-btn { display: block; width: 100%; background: linear-gradient(135deg, #7C5CFC, #9B6DFF); border: none; border-radius: 10px; padding: 14px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; }
-.mvp-cta-sub { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 10px; }
-.hiw { background: #F7F5FF; padding: 40px 24px; }
-.hiw-label { font-size: 11px; font-weight: 600; letter-spacing: 1.2px; color: #7C5CFC; text-transform: uppercase; margin-bottom: 8px; }
-.hiw-h2 { font-size: 24px; font-weight: 800; color: #1A1035; line-height: 1.25; margin-bottom: 8px; }
-.hiw-sub { font-size: 14px; color: #6B6480; margin-bottom: 32px; line-height: 1.6; }
-.step { display: flex; gap: 16px; }
-.step-left { display: flex; flex-direction: column; align-items: center; }
-.step-num { width: 36px; height: 36px; border-radius: 50%; background: #7C5CFC; color: white; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.step-line { width: 2px; flex: 1; background: #E0D9FF; margin: 4px 0; min-height: 20px; }
-.step-content { padding-bottom: 28px; flex: 1; }
-.step-title { font-size: 15px; font-weight: 700; color: #1A1035; margin: 6px 0 6px; }
-.step-desc { font-size: 13px; color: #6B6480; line-height: 1.6; margin-bottom: 10px; }
-.step-card { background: white; border: 0.5px solid #E0D9FF; border-radius: 10px; padding: 12px 14px; }
-.sc-row { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; }
-.sc-label { font-size: 11px; color: #9B91B8; }
-.sc-value { font-size: 13px; font-weight: 600; color: #1A1035; }
-.pill-yellow { background: #FFF7E6; border: 0.5px solid #FFD580; border-radius: 20px; padding: 4px 10px; font-size: 11px; color: #B07800; }
-.pill-red { background: #FFF0F0; border: 0.5px solid #FFC5C5; border-radius: 20px; padding: 4px 10px; font-size: 11px; color: #B03030; }
-.pill-green { background: #EDFAF3; border: 0.5px solid #86EBB5; border-radius: 20px; padding: 4px 10px; font-size: 11px; color: #1A7A4A; }
-.mini-pb { height: 4px; background: #E0D9FF; border-radius: 10px; margin-top: 6px; }
-.mini-pf { height: 4px; background: #7C5CFC; border-radius: 10px; width: 82%; }
-.sp { background: #2D2249; padding: 40px 24px; color: white; text-align: center; }
-.sp-stats { display: flex; justify-content: center; gap: 24px; margin-bottom: 28px; }
-.sp-stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-.sp-num { font-size: 32px; font-weight: 800; color: #A78BFA; line-height: 1; }
-.sp-lbl { font-size: 12px; color: rgba(255,255,255,0.5); }
-.sp-div { width: 1px; background: rgba(255,255,255,0.1); }
-.sp-bar { height: 4px; background: rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 6px; }
-.sp-bfill { height: 4px; background: #7C5CFC; border-radius: 10px; width: 24%; }
-.sp-blbl { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.35); margin-bottom: 28px; }
-.sp-h2 { font-size: 22px; font-weight: 800; line-height: 1.3; margin-bottom: 10px; }
-.sp-sub { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 24px; line-height: 1.6; }
-.quotes { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; text-align: left; }
-.quote { background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 14px 16px; }
-.q-text { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 10px; }
-.q-author { display: flex; align-items: center; gap: 8px; }
-.q-avatar { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
-.q-name { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); }
-.q-tag { font-size: 11px; color: rgba(255,255,255,0.35); }
-.final-input { width: 100%; background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 10px; padding: 14px 16px; color: white; font-size: 14px; outline: none; margin-bottom: 10px; display: block; }
-.final-input::placeholder { color: rgba(255,255,255,0.4); }
-.final-btn { width: 100%; background: #7C5CFC; border: none; border-radius: 10px; padding: 15px; color: white; font-size: 15px; font-weight: 700; cursor: pointer; display: block; }
-.fine { font-size: 11px; color: rgba(255,255,255,0.28); margin-top: 10px; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:#2D2249; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color:white; }
+.page { max-width:480px; margin:0 auto; }
+.vh-logo-bar { padding:20px; }
+.vh-logo-bar img { height:60px; }
+.vh { padding:24px; }
+.vh-badge { display:inline-block; padding:6px 14px; border-radius:20px; background:rgba(255,255,255,.1); margin-bottom:20px; font-size:12px; }
+.vh-h1 { font-size:34px; font-weight:800; margin-bottom:14px; line-height:1.15; }
+.vh-sub { color:rgba(255,255,255,.7); line-height:1.6; margin-bottom:24px; }
+.vh-row { display:flex; gap:8px; margin-bottom:18px; }
+.vh-input {
+flex:1;
+padding:14px;
+border:none;
+border-radius:10px;
+background:rgba(255,255,255,.1);
+color:white;
+}
+.vh-btn {
+padding:14px 18px;
+border:none;
+border-radius:10px;
+background:#7C5CFC;
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+.vh-phone {
+margin-top:24px;
+background:rgba(255,255,255,.05);
+padding:16px;
+border-radius:18px;
+}
+.vh-screen {
+background:#1A1035;
+padding:16px;
+border-radius:14px;
+}
+.vh-card {
+background:rgba(124,92,252,.15);
+padding:14px;
+border-radius:12px;
+margin-bottom:10px;
+}
+.vh-vname { font-size:12px; color:rgba(255,255,255,.6); }
+.vh-amt { font-size:28px; font-weight:800; margin:8px 0; }
+.vh-break {
+width:100%;
+margin-top:10px;
+padding:10px;
+border:none;
+border-radius:10px;
+background:rgba(255,255,255,.08);
+color:white;
+cursor:pointer;
+}
+.mvp-wrap { padding:24px; }
+.mvp-cta {
+padding:24px;
+border-radius:18px;
+background:rgba(255,255,255,.05);
+text-align:center;
+}
+.mvp-cta-btn {
+display:block;
+margin-top:14px;
+padding:14px;
+border-radius:10px;
+background:#7C5CFC;
+color:white;
+text-decoration:none;
+font-weight:700;
+}
+.sp {
+padding:40px 24px;
+text-align:center;
+}
+.final-input {
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:rgba(255,255,255,.1);
+color:white;
+margin-bottom:10px;
+}
+.final-btn {
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#7C5CFC;
+color:white;
+font-weight:700;
+cursor:pointer;
+}
 </style>
 </head>
+
 <body>
 <div class="page">
 
 <div class="vh-logo-bar">
-  <img src="LOGO.png" alt="Vaultly" />
+<img src="LOGO.png" alt="Vaultly">
 </div>
 
 <div class="vh">
-  <div class="vh-badge">Beta — 47 of 200 spots taken</div>
-  <h1 class="vh-h1">Your savings finally stick.</h1>
-  <p class="vh-sub">Vaultly adds friction between you and your money — so one impulse doesn't undo weeks of progress.</p>
-  <div class="vh-row">
-    <input class="vh-input" type="email" placeholder="Enter your email" id="hero-email" />
-    <button class="vh-btn" onclick="vaultlySubmit('hero-email', this)">Get early access</button>
-  </div>
-  <div class="vh-trust">
-    <span class="vh-ti"><span class="vh-dot"></span>Free to join</span>
-    <span class="vh-ti"><span class="vh-dot"></span>No credit card</span>
-    <span class="vh-ti"><span class="vh-dot"></span>Australian-built</span>
-  </div>
-  <div class="vh-spots">
-    <div class="vh-spots-lbl"><span>Beta spots remaining</span><span>153 left</span></div>
-    <div class="vh-bar"><div class="vh-fill"></div></div>
-  </div>
-  <div class="vh-phone">
-    <div class="vh-screen">
-      <div class="vh-appbar">
-        <img src="LOGO.png" alt="Vaultly" />
-      </div>
-      <div class="vh-card">
-        <div class="vh-vname">Trip to Japan 🇯🇵</div>
-        <div class="vh-amt">$2,400</div>
-        <div class="vh-pbg"><div class="vh-pfill"></div></div>
-        <div class="vh-meta"><span>82% complete</span><span>Goal: $2,900</span></div>
-        <div class="vh-deposit-row">
-          <span>📅 Weekly deposit</span>
-          <span class="vh-deposit-val">$87/week auto-calculated</span>
-        </div>
-        <div class="vh-deposit-row" style="border-top:none; padding-top:0; margin-top:-4px;">
-          <span>🎯 Goal date</span>
-          <span class="vh-deposit-val">4 Mar 2027</span>
-        </div>
-        <div class="vh-strong-badge">🔒 Strong protection active</div>
-        <button class="vh-break">⚠ Break vault now — wait 24hrs (no fee)<br>or access instantly for $15</button>
-        <div class="vh-warn">This will reset your streak and savings score</div>
-      </div>
-      <div class="vh-minis">
-        <div class="vh-mini"><span class="vh-mname">Emergency fund</span><span class="vh-mamt">$800</span></div>
-        <div class="vh-mini"><span class="vh-mname">New laptop</span><span class="vh-mamt">$340</span></div>
-      </div>
-    </div>
-  </div>
+<div class="vh-badge">Beta — 47 of 200 spots taken</div>
+
+<h1 class="vh-h1">Your savings finally stick.</h1>
+
+<p class="vh-sub">
+Vaultly adds friction between you and your money — so one impulse doesn't undo weeks of progress.
+</p>
+
+<div class="vh-row">
+<input class="vh-input" id="hero-email" placeholder="Enter your email">
+<button class="vh-btn" onclick="vaultlySubmit('hero-email',this)">Get early access</button>
+</div>
+
+<div class="vh-phone">
+<div class="vh-screen">
+
+<div class="vh-card">
+<div class="vh-vname">Trip to Japan 🇯🇵</div>
+<div class="vh-amt">$2,400</div>
+<button class="vh-break">Break vault now — wait 24hrs or pay $15</button>
+</div>
+
+</div>
+</div>
 </div>
 
 <div class="mvp-wrap">
-  <div class="mvp-cta">
-    <div class="mvp-cta-label">🚀 Live now</div>
-    <div class="mvp-cta-text">Try our working prototype — it's live right now.</div>
-    <a href="https://myvaultly.base44.app" target="_blank" class="mvp-cta-btn">Try the Vaultly prototype →</a>
-    <div class="mvp-cta-sub">Quick signup required · Free to use · No payment needed</div>
-  </div>
+<div class="mvp-cta">
+<div>🚀 Live now</div>
+<h2>Try our working prototype</h2>
+<a href="https://myvaultly.base44.app" class="mvp-cta-btn" target="_blank">
+Try Vaultly Prototype →
+</a>
 </div>
-
-<div class="hiw">
-  <div class="hiw-label">How it works</div>
-  <h2 class="hiw-h2">Three steps to actually follow through.</h2>
-  <p class="hiw-sub">No complicated setup. No new bank account. Just a system that works when willpower doesn't.</p>
-  <div class="step">
-    <div class="step-left"><div class="step-num">1</div><div class="step-line"></div></div>
-    <div class="step-content">
-      <p class="step-title">Create a vault for your goal</p>
-      <p class="step-desc">Name it, set a target amount, goal date, and deposit frequency — Vaultly calculates exactly what you need to save.</p>
-      <div class="step-card">
-        <div class="sc-row"><span class="sc-label">Vault name</span><span class="sc-value">Trip to Japan</span></div>
-        <div class="sc-row"><span class="sc-label">Target</span><span class="sc-value">$2,900</span></div>
-        <div class="sc-row"><span class="sc-label">Goal date</span><span class="sc-value">4 Mar 2027</span></div>
-        <div class="sc-row"><span class="sc-label">Frequency</span><span class="sc-value">Weekly</span></div>
-        <div class="sc-row"><span class="sc-label">Auto deposit</span><span class="pill-yellow">$87/week</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="step">
-    <div class="step-left"><div class="step-num">2</div><div class="step-line"></div></div>
-    <div class="step-content">
-      <p class="step-title">Deposit and build momentum</p>
-      <p class="step-desc">Every deposit grows your savings score and keeps your streak alive.</p>
-      <div class="step-card">
-        <div class="sc-row"><span class="sc-label">Saved so far</span><span class="sc-value">$2,400 of $2,900</span></div>
-        <div class="mini-pb"><div class="mini-pf"></div></div>
-        <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Current streak</span><span class="sc-value">🔥 14 days</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="step">
-    <div class="step-left"><div class="step-num">3</div></div>
-    <div class="step-content">
-      <p class="step-title">Friction stops the impulse</p>
-      <p class="step-desc">Need out early? Wait it out or pay a small fee. That pause is usually enough to protect everything you've built.</p>
-      <div class="step-card">
-        <div class="sc-row"><span class="sc-label">Withdrawal requested</span><span class="pill-red">⚠ 24hrs remaining</span></div>
-        <div class="sc-row" style="margin-top:8px;"><span class="sc-label">Most users cancel here</span><span class="pill-green">✓ Vault protected</span></div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <div class="sp">
-  <div class="sp-stats">
-    <div class="sp-stat"><span class="sp-num">47</span><span class="sp-lbl">on the waitlist</span></div>
-    <div class="sp-div"></div>
-    <div class="sp-stat"><span class="sp-num">153</span><span class="sp-lbl">beta spots left</span></div>
-    <div class="sp-div"></div>
-    <div class="sp-stat"><span class="sp-num">$0</span><span class="sp-lbl">to join</span></div>
-  </div>
-  <div class="sp-bar"><div class="sp-bfill"></div></div>
-  <div class="sp-blbl"><span>Beta filling fast</span><span>200 spots total</span></div>
-  <h2 class="sp-h2">You're not alone. Australians are ready for this.</h2>
-  <p class="sp-sub">We shared our idea — here's what people told us.</p>
-  <div class="quotes">
-    <div class="quote">
-      <div class="q-text">"This is just what I have been looking for. I have been searching for an app to help me stop my impulse spending."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#4C1D95;color:#C4B5FD;">S</div><div><div class="q-name">Shaun</div><div class="q-tag">QLD</div></div></div>
-    </div>
-    <div class="quote">
-      <div class="q-text">"I cannot wait for the full release of this app. BNPL has got me good."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#1E3A5F;color:#93C5FD;">R</div><div><div class="q-name">Renee</div><div class="q-tag">QLD</div></div></div>
-    </div>
-    <div class="quote">
-      <div class="q-text">"My ADHD has got me spending like I'm the queen. This is exactly what I need to help with all my impulse purchases."</div>
-      <div class="q-author"><div class="q-avatar" style="background:#3B1F5E;color:#E9D5FF;">J</div><div><div class="q-name">Jade</div><div class="q-tag">QLD</div></div></div>
-    </div>
-  </div>
-  <input class="final-input" type="email" placeholder="Enter your email address" id="final-email" />
-  <button class="final-btn" onclick="vaultlySubmit('final-email', this)">Claim your beta spot</button>
-  <div class="fine">Free to join · No credit card · Australian-built</div>
+<input class="final-input" id="final-email" placeholder="Enter your email address">
+<button class="final-btn" onclick="vaultlySubmit('final-email',this)">
+Claim your beta spot
+</button>
 </div>
 
 </div>
+
 <script>
 function vaultlySubmit(id, btn) {
-  var email = document.getElementById(id).value;
-  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
-  btn.textContent = 'Joining...';
-  btn.disabled = true;
-  fetch('https://a.klaviyo.com/client/subscriptions/?company_id=VG3Xut', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', 'revision': '2023-02-22' },
-    body: JSON.stringify({ data: { type: 'subscription', attributes: { list_id: 'UJxyyy', email: email } } })
-  }).then(() => {
-    btn.textContent = '✓ You\'re on the list!';
-    btn.style.background = '#1A7A4A';
-    document.getElementById(id).value = '';
-  }).catch(() => {
-    alert('Something went wrong. Please try again.');
-    btn.textContent = id === 'hero-email' ? 'Get early access' : 'Claim your beta spot';
-    btn.disabled = false;
-  });
+var email = document.getElementById(id).value;
+
+if (!email || !email.includes('@')) {
+alert('Please enter a valid email address.');
+return;
+}
+
+btn.textContent = 'Joining...';
+btn.disabled = true;
+
+fetch('https://a.klaviyo.com/client/subscriptions/?company_id=VG3Xut', {
+method: 'POST',
+headers: {
+'content-type': 'application/json',
+'revision': '2023-02-22'
+},
+body: JSON.stringify({
+data:{
+type:'subscription',
+attributes:{
+list_id:'UJxyyy',
+email:email
+}
+}
+})
+})
+.then(() => {
+btn.textContent = "✓ You're on the list!";
+btn.style.background = '#1A7A4A';
+document.getElementById(id).value = '';
+})
+.catch(() => {
+alert('Something went wrong.');
+btn.disabled = false;
+});
 }
 </script>
+
 </body>
 </html>
