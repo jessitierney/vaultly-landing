@@ -419,3 +419,12 @@ h2 {
   border-color: rgba(218, 130, 255, 0.65);
   box-shadow: 0 0 48px rgba(168, 85, 247, 0.3);
 }
+.waitlist {
+  margin: 40px auto 90px;
+  max-width: 920px;
+  text-align: center;
+  padding: 70px 24px;
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(198, 98, 255, 0.35), transparent 50%),
+    linear-gradient(180deg, rgba(32, 18, 75, 0.95), rgba(9,
