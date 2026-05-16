@@ -428,3 +428,83 @@ h2 {
   background:
     radial-gradient(circle at 50% 0%, rgba(198, 98, 255, 0.35), transparent 50%),
     linear-gradient(180deg, rgba(32, 18, 75, 0.95), rgba(9,
+.waitlist {
+  margin: 40px auto 90px;
+  max-width: 920px;
+  text-align: center;
+  padding: 70px 24px;
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(198, 98, 255, 0.35), transparent 50%),
+    linear-gradient(180deg, rgba(32, 18, 75, 0.95), rgba(9, 5, 23, 0.98));
+  border: 1px solid rgba(205, 170, 255, 0.28);
+  box-shadow: 0 0 60px rgba(126, 64, 255, 0.24);
+}
+
+.waitlist h2 {
+  margin-top: 0;
+}
+
+.waitlist p {
+  color: #d7cdf4;
+  font-size: 18px;
+}
+
+.waitlist form {
+  margin: 28px auto 0;
+  max-width: 560px;
+  display: flex;
+  gap: 12px;
+}
+
+.waitlist input {
+  flex: 1;
+  border: 1px solid rgba(205, 170, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 18px;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.waitlist input::placeholder {
+  color: #c8bdea;
+}
+
+@media (max-width: 850px) {
+
+  .hero-grid,
+  .split,
+  .planet-row,
+  .feature-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    margin-bottom: 35px;
+  }
+
+  .phone {
+    min-height: 650px;
+  }
+
+  .galaxy-screen {
+    height: 460px;
+  }
+
+  .planet-main {
+    width: 210px;
+    left: 44px;
+  }
+
+  .galaxy-strip img {
+    flex-basis: 220px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .waitlist form {
+    flex-direction: column;
+  }
+}
