@@ -349,3 +349,73 @@ h2 {
   box-shadow: 0 0 28px rgba(168, 85, 247, 0.35);
   cursor: pointer;
 }
+.galaxy-strip {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding: 30px 4px 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.galaxy-strip img {
+  flex: 0 0 260px;
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  scroll-snap-align: center;
+  filter: drop-shadow(0 0 34px rgba(168, 85, 247, 0.65));
+}
+
+.feature-grid,
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.feature-card,
+.price-card {
+  padding: 24px;
+}
+
+.feature-card span {
+  font-size: 34px;
+}
+
+.score-card {
+  padding: 34px;
+}
+
+.score-card p {
+  color: #c79cff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.score-card strong {
+  display: block;
+  font-size: 86px;
+  line-height: 1;
+}
+
+.score-card span {
+  display: block;
+  color: #d7cdf4;
+  margin-top: 14px;
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.price-card strong {
+  display: block;
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.price-card.featured {
+  border-color: rgba(218, 130, 255, 0.65);
+  box-shadow: 0 0 48px rgba(168, 85, 247, 0.3);
+}
